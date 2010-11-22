@@ -1,0 +1,5 @@
+To run:
+
+$ curl https://github.com/yappie/create-new-gedit-plugin/raw/master/create_plugin.py >\
+     tmp_create.py && python tmp_create.py; rm tmp_create.py
+

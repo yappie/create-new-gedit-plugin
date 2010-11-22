@@ -52,7 +52,9 @@ Website=http://www.gedit.org
 """.strip()
 
 module = raw_input('New Module Name [Ctrl+C to abort]:').strip()
+assert module
 author = raw_input('Author Name <and@your.email>:').strip()
+assert author
 
 module_name_lowercase = module.lower().replace(' ','_')
 
