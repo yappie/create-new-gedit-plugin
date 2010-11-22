@@ -70,13 +70,13 @@ plugin_dir = os.path.join(plugins_dir, module_name_lowercase)
 if not os.path.exists(plugin_dir):
     os.mkdir(plugin_dir)
 
-fn1 = os.path.join(plugin_dir, '%s.gedit-plugin' % module_name_lowercase)
+fn1 = os.path.join(plugins_dir, '%s.gedit-plugin' % module_name_lowercase)
 assert not os.path.exists(fn1), \
             "File '%s' already exists, won't overwrite plugin" % fn1
 with open(fn1, 'w') as f:
     f.write(manifest_file)
 
-fn2 = os.path.join(plugin_dir, '%s.py' % module_name_lowercase)
+fn2 = os.path.join(plugin_dir, '__init__.py')
 assert not os.path.exists(fn2), \
             "File '%s' already exists, won't overwrite plugin" % fn2
 with open(fn2, 'w') as f:
